@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/mon-repo.git'
+                git 'https://github.com/AbrahamBiaye/pipelineK6.git'
             }
         }
 
