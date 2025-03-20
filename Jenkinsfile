@@ -10,11 +10,7 @@ pipeline {
 
         stage('Install K6 (Linux)') {
             steps {
-                sh '''
-                if ! command -v k6 &> /dev/null; then
-                    sudo apt update && sudo apt install -y k6
-                fi
-                '''
+                sh "command -v k6 || echo 'K6 déjà installé'"
             }
         }
 
