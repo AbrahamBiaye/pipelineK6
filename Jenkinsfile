@@ -1,8 +1,12 @@
+
 pipeline {
-    stage('run k6 test') {
-      steps {
-        sh '/opt/homebrew/bin/k6 run script.js'
-      }
+    agent any
+    stages {
+        stage('Performance Testing') {
+            steps {
+                echo 'Running K6 performance tests...'
+                sh '/opt/homebrew/bin/k6 run test.js'
+            }
+        }
     }
-  }
 }
