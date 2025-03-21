@@ -1,5 +1,4 @@
 pipeline {
-  agent any
     stage('run k6 test') {
       steps {
         echo 'Installing k6'
